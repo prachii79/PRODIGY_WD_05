@@ -30,7 +30,34 @@ export default function Forecast({data}){
                                 </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel></AccordionItemPanel>
+                        <AccordionItemPanel>
+                            <div className="grid grid-cols-2 gap-x-4 p-2">
+                                <div className="flex items-center">
+                                    <label>Pressure:</label>
+                                    <label>{item.main.pressure}</label>
+                                </div>
+                                <div className="flex items-center">
+                                    <label>Humidity:</label>
+                                    <label>{item.main.humidity}</label>
+                                </div>
+                                <div className="flex items-center h-30 justify-between">
+                                    <label>Clouds:</label>
+                                    <label>{item.clouds.all}%</label>
+                                </div>
+                                <div className="flex items-center h-30 justify-between">
+                                    <label>Wind speed:</label>
+                                    <label>{item.wind.speed} m/s</label>
+                                </div>
+                                <div className="flex items-center h-30 justify-between">
+                                    <label>Sea level:</label>
+                                    <label>{item.main.sea_level}m</label>
+                                </div>
+                                <div className="flex items-center h-30 justify-between">
+                                    <label>Feels like:</label>
+                                    <label>{item.main.feels_like}°C</label>
+                                </div>
+                            </div>
+                        </AccordionItemPanel>
                    </AccordionItem>
                 ))}
             </Accordion>
