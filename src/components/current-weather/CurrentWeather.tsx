@@ -1,5 +1,3 @@
-import React from "react"
-
 export default function CurrentWeather({data}){
     return(
         <div className="w-80 p-5 pt-0 rounded-md shadow-[10px_-2px_20px_2px_rgba(0,0,0,0.33)] text-white bg-[#333] mx-auto mt-5 mb-0">
